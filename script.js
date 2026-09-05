@@ -26,7 +26,7 @@ const letterheadFields = [
   { id: 'instansiNama', label: 'Nama Instansi/Lembaga', type: 'text', placeholder: "DENNY'S BUNCH" },
   { id: 'instansiSub', label: 'Sub-judul Instansi (opsional)', type: 'text', placeholder: 'LEMBAGA PENDIDIKAN NONFORMAL (PNF)' },
   { id: 'instansiAlamat', label: 'Alamat Instansi', type: 'text', placeholder: 'Jl. D.I Panjaitan no.95 Lumajang, Jawa Timur 67312' },
-  { id: 'instansiKontak', label: 'Telp / Email / Website', type: 'text', placeholder: 'Telp: (085546)800 085 — dennysbunchcourse@gmail.com' },
+  { id: 'instansiKontak', label: 'Telp / Email / Website', type: 'text', placeholder: 'Telp: (0334)886145 — dennysbunchcourse@gmail.com' },
   { id: 'nomor', label: 'Nomor Surat', type: 'text', placeholder: '001/001-DB/IX/2026' },
   { id: 'hal', label: 'Hal / Perihal', type: 'text', placeholder: 'Undangan Rapat Wali Siswa' },
   { id: 'kepadaYth', label: 'Ditujukan Kepada', type: 'text', placeholder: 'Bapak/Ibu Wali Siswa' },
@@ -138,7 +138,6 @@ const letterTypes = {
           ${row('Kepada Yth.', d.tujuan)}
           ${row('', 'di Tempat')}
         </div>
-        <h3 style="text-align:left;text-decoration:none;margin:24px 0 14px;">SURAT PERMOHONAN</h3>
         <p class="lead">Dengan hormat,</p>
         <p class="lead">Yang bertanda tangan di bawah ini, saya:</p>
         <div class="block">
@@ -254,7 +253,6 @@ const letterTypes = {
       return `
         ${letterheadHtml(d)}
         ${docMetaHtml(d)}
-        <h2>SURAT UNDANGAN</h2>
         <p class="lead">Dengan hormat,</p>
         <p class="closing">Sehubungan dengan akan diadakannya <strong>${escapeHtml(d.acara) || '.....'}</strong>, kami mengundang Bapak/Ibu/Saudara untuk hadir pada:</p>
         <div class="block">
@@ -334,7 +332,6 @@ const letterTypes = {
       return `
         ${letterheadHtml(d)}
         ${docMetaHtml(d)}
-        <h2>SURAT PERINGATAN ${d.tingkat ? escapeHtml(d.tingkat).toUpperCase() : ''}</h2>
         <p class="lead">Yang bertanda tangan di bawah ini menyatakan bahwa:</p>
         <div class="block">
           ${row('Nama', d.namaPenerima)}
@@ -403,7 +400,6 @@ const letterTypes = {
       return `
         ${letterheadHtml(d)}
         ${docMetaHtml(d)}
-        <h2>SURAT KETERANGAN</h2>
         <p class="lead">Yang bertanda tangan di bawah ini menerangkan bahwa:</p>
         <div class="block">
           ${row('Nama', d.namaOrang)}
@@ -470,7 +466,6 @@ const letterTypes = {
       return `
         ${letterheadHtml(d)}
         ${docMetaHtml(d)}
-        <h2>SURAT EDARAN</h2>
         <p class="lead">Dengan hormat,</p>
         <p class="closing">${nl2html(d.isiEdaran) || '.....'}</p>
         <p class="closing">Demikian surat edaran ini kami sampaikan untuk diketahui dan dilaksanakan sebagaimana mestinya. Atas perhatiannya, kami ucapkan terima kasih.</p>
@@ -499,8 +494,6 @@ const letterTypes = {
       return `
         ${letterheadHtml(d)}
         ${docMetaHtml(d)}
-        <h2>SURAT KEPUTUSAN</h2>
-        <h3>TENTANG ${d.tentang ? escapeHtml(d.tentang).toUpperCase() : '.....'}</h3>
         <p class="lead"><strong>Menimbang:</strong></p>
         <p class="body-text">${nl2html(d.menimbang)}</p>
         <p class="lead"><strong>MEMUTUSKAN:</strong></p>

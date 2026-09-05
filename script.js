@@ -41,7 +41,7 @@ const letterheadFields = [
   { id: 'instansiNama', label: 'Nama Instansi/Lembaga', type: 'text', placeholder: "DENNY'S BUNCH" },
   { id: 'instansiSub', label: 'Sub-judul Instansi (opsional)', type: 'text', placeholder: 'LEMBAGA PENDIDIKAN NONFORMAL (PNF)' },
   { id: 'instansiAlamat', label: 'Alamat Instansi', type: 'text', placeholder: 'Jl. D.I Panjaitan no.95 Lumajang, Jawa Timur 67312' },
-  { id: 'instansiKontak', label: 'Telp / Email / Website', type: 'text', placeholder: 'Telp: 085546800085 (WA) — Website: dennysbunchcourse@gmail.com' },
+  { id: 'instansiKontak', label: 'Telp / Email / Website', type: 'text', placeholder: "Telp : 085546800085 (WA), E-mail : dennysbunchcourse@gmail.com, Website : www.denny's-bunch.com" },
   { id: 'nomor', label: 'Nomor Surat', type: 'text', placeholder: '001/001-DB/IX/2026' },
   { id: 'hal', label: 'Hal / Perihal', type: 'text', placeholder: 'Undangan Rapat Wali Siswa' },
   { id: 'kepadaYth', label: 'Ditujukan Kepada', type: 'text', placeholder: 'Bapak/Ibu Wali Siswa' },
@@ -51,7 +51,7 @@ const letterheadDefaults = {
   instansiNama: "DENNY'S BUNCH",
   instansiSub: 'LEMBAGA PENDIDIKAN NONFORMAL (PNF)',
   instansiAlamat: 'Jl. D.I Panjaitan no.95 Lumajang, Jawa Timur, kode pos: 67312',
-  instansiKontak: "Telp: 085546800085 (WA) — dennysbunchcourse@gmail.com — www.denny's-bunch.com",
+  instansiKontak: "Telp : 085546800085 (WA), E-mail : dennysbunchcourse@gmail.com, Website : www.denny's-bunch.com",
 };
 
 function withLetterhead(extraFields) {

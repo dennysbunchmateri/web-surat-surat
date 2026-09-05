@@ -250,6 +250,11 @@ html, body {
   color: #333;
 }
 
+.lh-link {
+  color: #1a56db;
+  text-decoration: underline;
+}
+
 .doc-meta {
   display: flex;
   justify-content: space-between;

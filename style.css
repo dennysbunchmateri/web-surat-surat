@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Stop';
+  src: url('fonts/STOP.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --ink: #1D3557;
   --ink-dark: #14243D;
@@ -229,10 +237,11 @@ html, body {
 }
 
 .letterhead .lh-name {
-  font-size: 22px;
-  font-weight: 700;
+  font-family: 'Stop', 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
   margin: 0;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .letterhead .lh-sub {

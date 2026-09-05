@@ -210,15 +210,15 @@ html, body {
 .letterhead {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding-bottom: 10px;
+  gap: 14px;
+  padding-bottom: 8px;
   border-bottom: 3px solid var(--ink);
   margin-bottom: 4px;
 }
 
 .letterhead img {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -229,25 +229,28 @@ html, body {
 }
 
 .letterhead .lh-org {
-  font-size: 12.5px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.02em;
   margin: 0;
+  line-height: 1.2;
   color: #C1272D;
 }
 
 .letterhead .lh-name {
   font-family: 'Stop', 'Inter', sans-serif;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 400;
   margin: 0;
+  line-height: 1.15;
   letter-spacing: 0.02em;
 }
 
 .letterhead .lh-sub {
-  font-size: 11px;
-  margin: 1px 0 0;
-  color: #333;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.35;
+  color: #1a1a1a;
 }
 
 .lh-link {
@@ -428,10 +431,10 @@ html, body {
     gap: 10px;
   }
 
-  .letterhead img { width: 46px; height: 46px; }
-  .letterhead .lh-name { font-size: 16px; }
-  .letterhead .lh-org { font-size: 10px; }
-  .letterhead .lh-sub { font-size: 9.5px; }
+  .letterhead img { width: 56px; height: 56px; }
+  .letterhead .lh-name { font-size: 20px; }
+  .letterhead .lh-org { font-size: 11px; }
+  .letterhead .lh-sub { font-size: 10.5px; }
 
   .doc-meta {
     flex-direction: column;

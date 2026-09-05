@@ -36,7 +36,7 @@ const letterheadDefaults = {
   instansiNama: "DENNY'S BUNCH",
   instansiSub: 'LEMBAGA PENDIDIKAN NONFORMAL (PNF)',
   instansiAlamat: 'Jl. D.I Panjaitan no.95 Lumajang, Jawa Timur, kode pos: 67312',
-  instansiKontak: "Telp: (0334)886145 — dennysbunchcourse@gmail.com — www.denny's-bunch.com",
+  instansiKontak: "Telp: (0334)886145 / 085546800085 (WA) — dennysbunchcourse@gmail.com — www.denny's-bunch.com",
 };
 
 function withLetterhead(extraFields) {

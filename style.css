@@ -1,0 +1,439 @@
+:root {
+  --ink: #1D3557;
+  --ink-dark: #14243D;
+  --gold: #B8862B;
+  --bg: #E9ECF1;
+  --panel: #FFFFFF;
+  --line: #D7DCE3;
+  --text: #24303F;
+  --text-soft: #5B6672;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --serif: 'Noto Serif', 'Times New Roman', Times, serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  font-family: var(--sans);
+  color: var(--text);
+}
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 14px 28px;
+  background: var(--ink-dark);
+  border-bottom: 3px solid var(--gold);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.brand-mark {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #C6CEDA;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 9px 16px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.tab-btn:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+.tab-btn.active {
+  background: var(--bg);
+  color: var(--ink-dark);
+  font-weight: 600;
+}
+
+/* ---------- Workspace layout ---------- */
+
+.workspace {
+  display: flex;
+  align-items: flex-start;
+  min-height: calc(100vh - 60px);
+}
+
+.form-panel {
+  width: 380px;
+  flex-shrink: 0;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  padding: 28px 26px 60px;
+  min-height: calc(100vh - 60px);
+}
+
+.form-panel h1 {
+  font-size: 1.25rem;
+  margin: 0 0 4px;
+  color: var(--ink-dark);
+}
+
+.form-hint {
+  margin: 0 0 22px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  text-transform: none;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  color: var(--text);
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #FBFBFC;
+  resize: vertical;
+}
+
+.field textarea { min-height: 80px; line-height: 1.5; }
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--ink);
+  background: #fff;
+}
+
+/* ---------- Preview panel ---------- */
+
+.preview-panel {
+  flex: 1;
+  min-height: calc(100vh - 60px);
+  padding: 24px 32px 60px;
+}
+
+.preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 720px;
+  margin: 0 auto 18px;
+}
+
+.preview-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  letter-spacing: 0.02em;
+}
+
+.print-btn {
+  appearance: none;
+  border: none;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.print-btn:hover { background: var(--ink-dark); }
+
+.paper-scroll {
+  display: flex;
+  justify-content: center;
+}
+
+.paper {
+  width: 720px;
+  max-width: 100%;
+  min-height: 1010px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(20, 36, 61, 0.08), 0 14px 34px rgba(20, 36, 61, 0.12);
+  padding: 76px 72px;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+
+.letterhead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--ink);
+  margin-bottom: 4px;
+}
+
+.letterhead img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.letterhead .lh-text {
+  flex: 1;
+  text-align: center;
+}
+
+.letterhead .lh-org {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.letterhead .lh-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+.letterhead .lh-sub {
+  font-size: 11px;
+  margin: 1px 0 0;
+  color: #333;
+}
+
+.doc-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 22px 0 24px;
+  font-size: 15px;
+}
+
+.doc-meta .meta-left .row .label { width: 60px; }
+.doc-meta .meta-right { text-align: left; }
+
+.sign-cols {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.sign-cols .sign-block {
+  margin: 0;
+  width: 46%;
+}
+
+.paper h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 0 0 4px;
+  letter-spacing: 0.02em;
+}
+
+.paper h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 0 0 28px;
+  letter-spacing: 0.02em;
+}
+
+.paper .lead {
+  margin: 0 0 14px;
+  text-align: justify;
+}
+
+.paper .row {
+  display: flex;
+  margin-bottom: 3px;
+}
+
+.paper .row .label {
+  width: 190px;
+  flex-shrink: 0;
+}
+
+.paper .row .colon {
+  width: 14px;
+  flex-shrink: 0;
+}
+
+.paper .row .value {
+  flex: 1;
+}
+
+.paper .block {
+  margin-bottom: 14px;
+}
+
+.paper .body-text {
+  text-align: justify;
+  margin: 14px 0;
+  white-space: pre-line;
+}
+
+.paper .closing {
+  text-align: justify;
+  margin: 14px 0 40px;
+}
+
+.paper .sign-block {
+  width: 260px;
+  margin-left: auto;
+  text-align: center;
+}
+
+.paper .sign-place-date {
+  margin-bottom: 4px;
+}
+
+.paper .sign-role {
+  margin-bottom: 70px;
+}
+
+.paper .sign-name {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  .topbar, .form-panel, .preview-toolbar { display: none !important; }
+  .preview-panel { padding: 0; }
+  .paper-scroll { justify-content: flex-start; }
+  .paper {
+    box-shadow: none;
+    width: auto;
+    min-height: 0;
+    padding: 20mm 22mm;
+  }
+  body { background: #fff; }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 920px) {
+  .workspace { flex-direction: column; }
+  .form-panel {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    min-height: auto;
+  }
+  .preview-panel { min-height: auto; }
+  .paper { width: 100%; padding: 40px 28px; }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    gap: 0;
+    padding: 12px 14px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .brand { font-size: 0.95rem; }
+
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tabs::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 8px 13px;
+    font-size: 0.85rem;
+  }
+
+  .form-panel { padding: 20px 16px 40px; }
+  .preview-panel { padding: 16px 14px 40px; }
+
+  .preview-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .print-btn { width: 100%; }
+
+  .paper {
+    padding: 26px 18px;
+    font-size: 13.5px;
+  }
+
+  .letterhead {
+    gap: 10px;
+  }
+
+  .letterhead img { width: 46px; height: 46px; }
+  .letterhead .lh-name { font-size: 16px; }
+  .letterhead .lh-org { font-size: 10px; }
+  .letterhead .lh-sub { font-size: 9.5px; }
+
+  .doc-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .doc-meta .meta-right { text-align: left; }
+
+  .paper .row .label { width: 130px; }
+
+  .sign-block, .sign-cols .sign-block {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+
+  .sign-cols {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
